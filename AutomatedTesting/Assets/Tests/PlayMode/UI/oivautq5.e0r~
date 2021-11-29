@@ -1,0 +1,42 @@
+﻿using System.Collections;
+using NUnit.Framework;
+using UnityEngine.TestTools;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+namespace Tests
+{
+    public class MainMenu
+    {
+        string sceneName = "MainMenu";
+        string tapToPlayButtonID = "";
+        string tapToPlayText = "";
+        string settingButtonID = "";
+        string settingButtonText = "";
+        string carsButtonID = "";
+        string carsButtonText = "";
+        string charactersButtonID = "";
+        string charactersButtonText = "";
+        string shopButtonID = "";
+        string shopButtonText = "";
+        string leaderBoardButtonID = "";
+        string leaderBoardButtonText = "";
+        string buyBoostsButtonID = "";
+        string buyBoostsText = "";
+        string goalsButtonID = "";
+        string goalsButtonText = "";
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            SceneManager.LoadSceneAsync(sceneName);
+        }
+
+        [UnityTest]
+        public IEnumerator MainMenuMainScreenTest()
+        {
+            Debug.Log("Let's Start");
+            yield return null;
+            Debug.Log("Let's Do it!");
+        }
+    }
+}
