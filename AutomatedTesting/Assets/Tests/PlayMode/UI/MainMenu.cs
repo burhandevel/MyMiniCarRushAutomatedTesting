@@ -14,6 +14,7 @@ namespace Tests
         float seconds = 1;
         // Scene Name
         string sceneName = "MainMenu";
+        string gamePlaySceneName = "GamePlay";
         // Buttons and their respective texts
         string tapToPlayButtonID = "tapToPlay";
         string tapToPlayText = "Tap To Play";
@@ -66,6 +67,7 @@ namespace Tests
             
         }
         
+        // Must Run at First
         [UnityTest]
         public IEnumerator A_MainMenuPanelTest()
         {
@@ -82,6 +84,11 @@ namespace Tests
             string actualText = tapToPlayButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
             yield return null;
             Assert.AreEqual(tapToPlayText, actualText);
+
+            automation.Click(tapToPlayButton);
+            var time = Time.time;
+            yield return new WaitUntil(() => SceneManager.GetActiveScene().name == gamePlaySceneName || Time.time > time + 10);
+            Assert.AreEqual(gamePlaySceneName, SceneManager.GetActiveScene().name);
         }
 
         [UnityTest]
@@ -244,7 +251,7 @@ namespace Tests
             automation.Click(leaderBoardButton);
             yield return new WaitForSeconds(seconds);
             GameObject mainMenuPanelAfterClick = CustomID.testingInstance.GetGameObject(mainMenuPanelID);
-            Assert.IsNull(mainMenuPanelAfterClick);
+            Assert.IsNotNull(mainMenuPanelAfterClick);
             GameObject leaderBoardPanelAfterClick = CustomID.testingInstance.GetGameObject(leaderBoardPanelID);
             Assert.IsNotNull(leaderBoardPanelAfterClick);
 

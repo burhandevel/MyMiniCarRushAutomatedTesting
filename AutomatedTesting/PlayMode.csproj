@@ -65,7 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tests\PlayMode\MechanicsTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Goals.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\HUD.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\LeaderBoards.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\MainMenu.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Pause.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Settings.cs" />
     <None Include="Assets\Tests\PlayMode\PlayMode.asmdef" />
     <Reference Include="UnityEngine">
@@ -246,10 +250,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/AutomatedTesting/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Knights">
-      <HintPath>D:/AutomatedTesting/Assets/MyPlugin/Knights.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Assets/MyPlugin/Knights.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -597,16 +601,16 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/AutomatedTesting/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/AutomatedTesting/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/AutomatedTesting/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/AutomatedTesting/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

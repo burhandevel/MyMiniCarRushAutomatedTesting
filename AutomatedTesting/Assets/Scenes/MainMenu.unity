@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 314}
+  m_AnchoredPosition: {x: 0, y: 136}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101012422
@@ -758,7 +758,6 @@ GameObject:
   - component: {fileID: 187421715}
   - component: {fileID: 187421714}
   - component: {fileID: 187421713}
-  - component: {fileID: 187421712}
   m_Layer: 5
   m_Name: SocialMedia
   m_TagString: Untagged
@@ -786,19 +785,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &187421712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187421710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f129403d54b78894ca2729ccc0ef84df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  testingID: leaderBoardBackButton
 --- !u!114 &187421713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,18 +827,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 187421714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1982028889}
-        m_MethodName: OpenThePanel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MainMenuPanel
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &187421714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,8 +1505,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: 0, y: -1160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340016214
 MonoBehaviour:
@@ -5357,15 +5332,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1982028889}
-        m_MethodName: OpenThePanel
+      - m_Target: {fileID: 1339905840}
+        m_MethodName: CloseThePopUp
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenuPanel
+          m_StringArgument: LeaderBoardPanel
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1214360894
@@ -6050,6 +6025,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308573146}
   m_CullTransparentMesh: 0
+--- !u!1 &1339905839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339905841}
+  - component: {fileID: 1339905840}
+  m_Layer: 0
+  m_Name: PopUpsHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1339905840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339905839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9bc2684f0df504aace269270a71d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Popups:
+  - {fileID: 340016212}
+--- !u!4 &1339905841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339905839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 670.75946, y: 924.29, z: -2465.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393418949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,8 +6231,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1982028889}
-        m_MethodName: OpenThePanel
+      - m_Target: {fileID: 1339905840}
+        m_MethodName: OpenThePopUp
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6607,6 +6627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481330746}
   - component: {fileID: 1481330747}
+  - component: {fileID: 1481330748}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -6686,6 +6707,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1481330748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481330745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129403d54b78894ca2729ccc0ef84df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testingID: musicSlider
 --- !u!1 &1486704023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6840,6 +6874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501016937}
   - component: {fileID: 1501016938}
+  - component: {fileID: 1501016939}
   m_Layer: 5
   m_Name: Sounds
   m_TagString: Untagged
@@ -6919,6 +6954,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1501016939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501016936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129403d54b78894ca2729ccc0ef84df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testingID: soundSlider
 --- !u!1 &1520415656
 GameObject:
   m_ObjectHideFlags: 0
@@ -7980,6 +8028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774351653}
   - component: {fileID: 1774351654}
+  - component: {fileID: 1774351655}
   m_Layer: 5
   m_Name: Rumble
   m_TagString: Untagged
@@ -8059,6 +8108,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1774351655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774351652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129403d54b78894ca2729ccc0ef84df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testingID: rumbleSlider
 --- !u!1 &1782409921
 GameObject:
   m_ObjectHideFlags: 0
@@ -8693,6 +8755,7 @@ GameObject:
   - component: {fileID: 1974433710}
   - component: {fileID: 1974433709}
   - component: {fileID: 1974433708}
+  - component: {fileID: 1974433712}
   m_Layer: 5
   m_Name: TapToPlayButton
   m_TagString: Untagged
@@ -8775,7 +8838,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1974433710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1974433712}
+        m_MethodName: LoadGamePlayScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1974433710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8813,6 +8887,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974433706}
   m_CullTransparentMesh: 0
+--- !u!114 &1974433712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974433706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c77de703a3ec5241a6c9a47e12e0cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1982028888
 GameObject:
   m_ObjectHideFlags: 0
@@ -8846,10 +8932,10 @@ MonoBehaviour:
   - {fileID: 755834377}
   - {fileID: 151531874}
   - {fileID: 1409720612}
-  - {fileID: 340016212}
   - {fileID: 567394491}
   - {fileID: 970724822}
   - {fileID: 871881952}
+  - {fileID: 340016212}
 --- !u!4 &1982028890
 Transform:
   m_ObjectHideFlags: 0
