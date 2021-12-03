@@ -11,7 +11,6 @@ namespace Tests
     public class Settings
     {
         bool independentTest = false;
-        //float seconds = 1;
         WaitForSeconds seconds = new WaitForSeconds(1);
         string sceneName = "MainMenu";
         AutomationTool automation;

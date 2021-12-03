@@ -25,6 +25,10 @@ public class PopupHandler : MonoBehaviour
             {
                 popup.SetActive(true);
             }
+            else
+            {
+                popup.SetActive(false);
+            }
         }
     }
 

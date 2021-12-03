@@ -35,7 +35,7 @@ namespace Tests
             // Before Click Test
             GameObject goalsButton = CustomID.testingInstance.GetGameObject(goalsButtonID);
             Assert.IsNotNull(goalsButton);
-            string actualText = goalsButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = goalsButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(goalsButtonText, actualText);
 

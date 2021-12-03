@@ -65,12 +65,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tests\PlayMode\MechanicsTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Cars.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Characters.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\GameOver.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Goals.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\HUD.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\LeaderBoards.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\MainMenu.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Pause.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Revive.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Settings.cs" />
+    <Compile Include="Assets\Tests\PlayMode\UI\Shop.cs" />
     <None Include="Assets\Tests\PlayMode\PlayMode.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

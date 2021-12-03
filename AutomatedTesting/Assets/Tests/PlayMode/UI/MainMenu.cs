@@ -43,6 +43,8 @@ namespace Tests
         string carsBackButtonID = "carsBackButton";
         string charactersBackButtonID = "charactersBackButton";
         string shopBackButtonID = "shopBackButton";
+        string openMysteryBoxButtonID = "openMysteryBoxButton";
+        string tapToReturnButtonID = "tapToReturnButton";
 
         // Panels
         string mainMenuPanelID = "mainMenu";
@@ -52,6 +54,7 @@ namespace Tests
         string carsPanelID = "carsPanel";
         string characterPanelID = "characterPanel";
         string shopPanelID = "shopPanel";
+        string mysteryBoxPopUpID = "mysteryBoxPopup";
 
 
         [OneTimeSetUp]
@@ -81,7 +84,7 @@ namespace Tests
         {
             GameObject tapToPlayButton = CustomID.testingInstance.GetGameObject(tapToPlayButtonID);
             Assert.IsNotNull(tapToPlayButton);
-            string actualText = tapToPlayButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = tapToPlayButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(tapToPlayText, actualText);
 
@@ -97,7 +100,7 @@ namespace Tests
             // Before Click Test
             GameObject settingButton = CustomID.testingInstance.GetGameObject(settingButtonID);
             Assert.IsNotNull(settingButton);
-            string actualText = settingButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = settingButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(settingButtonText, actualText);
 
@@ -131,7 +134,7 @@ namespace Tests
             // Before Click Test
             GameObject carsButton = CustomID.testingInstance.GetGameObject(carsButtonID);
             Assert.IsNotNull(carsButton);
-            string actualText = carsButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = carsButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(carsButtonText, actualText);
 
@@ -159,7 +162,7 @@ namespace Tests
             // Before Click Test
             GameObject characterButton = CustomID.testingInstance.GetGameObject(charactersButtonID);
             Assert.IsNotNull(characterButton);
-            string actualText = characterButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = characterButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(charactersButtonText, actualText);
 
@@ -187,7 +190,7 @@ namespace Tests
             // Before Click Test
             GameObject shopButton = CustomID.testingInstance.GetGameObject(shopButtonID);
             Assert.IsNotNull(shopButton);
-            string actualText = shopButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = shopButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(shopButtonText, actualText);
 
@@ -215,7 +218,7 @@ namespace Tests
             // Before Click Test
             GameObject buyBoostButton = CustomID.testingInstance.GetGameObject(buyBoostButtonID);
             Assert.IsNotNull(buyBoostButton);
-            string actualText = buyBoostButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = buyBoostButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(buyBoostButtonText, actualText);
 
@@ -243,7 +246,8 @@ namespace Tests
             // Before Click Test
             GameObject leaderBoardButton = CustomID.testingInstance.GetGameObject(leaderBoardButtonID);
             Assert.IsNotNull(leaderBoardButton);
-            string actualText = leaderBoardButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            //string actualText = leaderBoardButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = leaderBoardButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(leaderBoardButtonText, actualText);
 
@@ -271,7 +275,7 @@ namespace Tests
             // Before Click Test
             GameObject goalsButton = CustomID.testingInstance.GetGameObject(goalsButtonID);
             Assert.IsNotNull(goalsButton);
-            string actualText = goalsButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = goalsButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(goalsButtonText, actualText);
 
@@ -301,11 +305,38 @@ namespace Tests
         [UnityTest]
         public IEnumerator DailyBonusButtonTest()
         {
+            // Before Click Test
             GameObject dailyBonusButton = CustomID.testingInstance.GetGameObject(dailyBonusButtonID);
             Assert.IsNotNull(dailyBonusButton);
-            string actualText = dailyBonusButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = dailyBonusButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(dailyBonusButtonText, actualText);
+
+            // On Click daily Bonus Button
+            automation.Click(dailyBonusButton);
+            yield return seconds;
+            GameObject mysteryBoxPopUp = CustomID.testingInstance.GetGameObject(mysteryBoxPopUpID);
+            Assert.IsNotNull(mysteryBoxPopUp);
+
+            // Get Mystery Box Button
+            GameObject openMysteryBoxButton = CustomID.testingInstance.GetGameObject(openMysteryBoxButtonID);
+            Assert.IsNotNull(openMysteryBoxButton);
+            GameObject tapToReturnButton = CustomID.testingInstance.GetGameObject(tapToReturnButtonID);
+            Assert.IsNull(tapToReturnButton);
+
+            // Click Open Mystery Box Button
+            automation.Click(openMysteryBoxButton);
+            yield return seconds;
+            GameObject tapToReturnButton1 = CustomID.testingInstance.GetGameObject(tapToReturnButtonID);
+            Assert.IsNotNull(tapToReturnButton1);
+
+            // Click TapToReturn
+            automation.Click(tapToReturnButton1);
+            yield return seconds;
+            GameObject mysteryBoxPopUp1 = CustomID.testingInstance.GetGameObject(mysteryBoxPopUpID);
+            Assert.IsNull(mysteryBoxPopUp1);
+            GameObject mainMenu = CustomID.testingInstance.GetGameObject(mainMenuPanelID);
+            Assert.IsNotNull(mainMenu);
         }
 
         [UnityTest]
@@ -314,7 +345,7 @@ namespace Tests
             // Before Click Test
             GameObject buyCurrencyButton = CustomID.testingInstance.GetGameObject(buyCurrencyButtonID);
             Assert.IsNotNull(buyCurrencyButton);
-            string actualText = buyCurrencyButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = buyCurrencyButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(buyCurrencyButtonText, actualText);
 

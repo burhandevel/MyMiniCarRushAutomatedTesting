@@ -60,7 +60,7 @@ namespace Tests
             // Click tap to play
             GameObject tapToPlayButton = CustomID.testingInstance.GetGameObject(tapToPlayButtonID);
             Assert.IsNotNull(tapToPlayButton);
-            string actualText = tapToPlayButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text;
+            string actualText = tapToPlayButton.gameObject.GetComponentInChildren<Text>().text;
             yield return null;
             Assert.AreEqual(tapToPlayText, actualText);
 
@@ -76,7 +76,7 @@ namespace Tests
             GameObject pauseButton = CustomID.testingInstance.GetGameObject(pauseButtonID);
             Assert.IsNotNull(pauseButton);
             yield return null;
-            Assert.AreEqual(pauseButtonText, pauseButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text);
+            Assert.AreEqual(pauseButtonText, pauseButton.gameObject.GetComponentInChildren<Text>().text);
 
             GameObject hudPanel = CustomID.testingInstance.GetGameObject(hudPanelID);
             Assert.IsNotNull(hudPanel);
@@ -96,7 +96,7 @@ namespace Tests
             // OnClick Test
             GameObject resumeButton = CustomID.testingInstance.GetGameObject(resumeButtonID);
             Assert.IsNotNull(resumeButton);
-            Assert.AreEqual(resumeButtonText, resumeButton.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>().text);
+            Assert.AreEqual(resumeButtonText, resumeButton.gameObject.GetComponentInChildren<Text>().text);
             automation.Click(resumeButton);
             yield return seconds;
             GameObject hudPanelOnResume = CustomID.testingInstance.GetGameObject(hudPanelID);
@@ -177,7 +177,7 @@ namespace Tests
             Assert.IsNotNull(pausePanel);
             Assert.IsNull(buyCurrencyPopupPanel);
 
-            // On Click the buy boost button
+            // On Click the buy Currency button
             automation.Click(buyCurrencyButton);
             yield return seconds;
             GameObject pausePanelAfterClick = CustomID.testingInstance.GetGameObject(pausePanelID);
@@ -192,7 +192,10 @@ namespace Tests
             GameObject currentPopupOnCoinsClick = CustomID.testingInstance.GetGameObject(buyCurrencyPopupPanelID);
             Assert.IsNull(currentPopupOnCoinsClick);
 
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////
             // Again Click the buy currency button
+            GameObject buyCurrencyButton1 = CustomID.testingInstance.GetGameObject(buyCurrencyButtonID);
+            Assert.IsNotNull(buyCurrencyButton1);
             automation.Click(buyCurrencyButton);
             yield return seconds;
             GameObject pausePanelAfterClick1 = CustomID.testingInstance.GetGameObject(pausePanelID);
@@ -206,6 +209,7 @@ namespace Tests
             yield return seconds;
             GameObject currentPopupOnDiamondsClick = CustomID.testingInstance.GetGameObject(buyCurrencyPopupPanelID);
             Assert.IsNull(currentPopupOnDiamondsClick);
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
 
         [UnityTest]
