@@ -21,6 +21,10 @@ namespace Tests
 
         string characterPanelID = "characterPanel";
 
+        // Characters PlayerPrefs
+        string AriPlayerPref = "ARI";
+        string ZadePlayerPref = "ZADE";
+
         [OneTimeSetUp]
         public void OneSetUp()
         {

@@ -10,7 +10,7 @@ using Knights;
 
 namespace Tests
 {
-    /*public class MechanicsTests
+    public class MechanicsTests
     {
         GameObject player = null;
         Mechanics mechanics = null;
@@ -27,7 +27,7 @@ namespace Tests
         string Dash = "Dash";
         string Boost = "Boost";
         // Lanes Data
-        float maxLanes = 5;
+        float maxLanes = 3;
         float laneSwitchDistance = 1;
         float rightLaneBoundary;
         float leftLaneBoundary;
@@ -37,7 +37,7 @@ namespace Tests
         public void OneTimeSetUp()
         {
             SceneManager.LoadSceneAsync(sceneName);
-            if(maxLanes % 2 == 0)
+            if (maxLanes % 2 == 0)
             {
                 rightLaneBoundary = maxLanes;
                 leftLaneBoundary = 1;
@@ -57,15 +57,15 @@ namespace Tests
         [SetUp]
         public void SetUp()
         {
-            
+
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
-        
+
         [UnityTest]
         public IEnumerator SwipeLeftTest()
         {
-            if(player == null)
+            if (player == null)
             {
                 player = CustomID.testingInstance.GetGameObject(playerID);
                 // Reference to input script
@@ -76,14 +76,16 @@ namespace Tests
             yield return new WaitForSeconds(1);
 
             float xPosition = player.transform.position.x;
-      
+
             if (xPosition == leftLaneBoundary)
             {
+                // Call Swipe Left Method From Input Script
                 reflection.CallMethod(mechanics, SwipeLeft);
                 Assert.AreEqual(xPosition, player.transform.position.x);
             }
             else
             {
+                // Call Swipe Left Method From Input Script
                 reflection.CallMethod(mechanics, SwipeLeft);
                 var time = Time.time;
                 yield return new WaitUntil(() => player.transform.position.x == (xPosition - laneSwitchDistance) || Time.time >= time + delay);
@@ -108,18 +110,18 @@ namespace Tests
             float xPosition = player.transform.position.x;
             if (xPosition == rightLaneBoundary)
             {
+                // Call Swipe Right Method From Input Script
                 reflection.CallMethod(mechanics, SwipeRight);
                 Assert.AreEqual(xPosition, player.transform.position.x);
             }
             else
             {
+                // Call Swipe Right Method From Input Script
                 reflection.CallMethod(mechanics, SwipeRight);
                 var time = Time.time;
                 yield return new WaitUntil(() => player.transform.position.x == (xPosition + laneSwitchDistance) || Time.time >= time + delay);
                 Assert.AreEqual(xPosition + laneSwitchDistance, player.transform.position.x);
             }
-
-            //yield return new WaitForSeconds(1);
         }
 
         [UnityTest]
@@ -135,26 +137,11 @@ namespace Tests
             yield return new WaitForSeconds(1);
 
             float yPosition = player.transform.position.y;
-            if(yPosition > 0)
-            {
-                reflection.CallMethod(mechanics, SwipeUp);
-                Assert.AreEqual(yPosition, player.transform.position.y);
-            }
-            else if(yPosition == 0)
-            {
-                reflection.CallMethod(mechanics, SwipeUp);
-                var time = Time.time;
-                yield return new WaitUntil(() => player.transform.position.y == yPosition + jumpHeight || Time.time >= time + delay);
-                Assert.AreEqual(yPosition + jumpHeight, player.transform.position.y);
-                var time2 = Time.time;
-                yield return new WaitUntil(() => player.transform.position.y == 0 || Time.time > time + delay);
-                bool grounded = reflection.GetValue<bool>(mechanics, "grounded");
-                Assert.IsTrue(grounded);
-                //Assert.AreEqual(0, player.transform.position.y);
-                
-            }
-
-            //yield return new WaitForSeconds(1);
+            // Call SwipeUp Method from Input Script
+            reflection.CallMethod(mechanics, SwipeUp);
+            var time = Time.time;
+            yield return new WaitUntil(() => player.transform.position.y == yPosition + jumpHeight || Time.time >= time + delay);
+            Assert.AreEqual(yPosition + jumpHeight, player.transform.position.y);
         }
 
         [UnityTest]
@@ -170,7 +157,7 @@ namespace Tests
             yield return new WaitForSeconds(1);
 
             float yScale = player.transform.localScale.y;
-            if(yScale < 1)
+            if (yScale < 1)
             {
                 reflection.CallMethod(mechanics, SwipeDown);
                 Assert.AreEqual(yScale, player.transform.localScale.y);
@@ -207,11 +194,11 @@ namespace Tests
             //Assert.AreEqual(8, reflection.GetValue<float>(mechanics, "speed"));
             yield return new WaitForSeconds(2);
             float zPositionFinal = player.transform.position.z;
-            float distance = (float) System.Math.Round((zPositionFinal - zPositionInitial), 0);
+            float distance = (float)System.Math.Round((zPositionFinal - zPositionInitial), 0);
             Assert.GreaterOrEqual(distance, 16);
             //Assert.AreEqual(5, reflection.GetValue<float>(mechanics, "speed"));
             Debug.Log("Dash Distance = " + distance);
-            
+
             //yield return new WaitForSeconds(1);
 
         }
@@ -263,14 +250,14 @@ namespace Tests
             yield return new WaitUntil(() => (player.transform.position.y > yPosition) && (player.transform.localScale.y == yLocalScale - 0.5f) || Time.time > time + 3);
             Assert.IsTrue((player.transform.position.y > yPosition) && (player.transform.localScale.y == yLocalScale - 0.5f));
 
-            *//*if((player.transform.position.y > yPosition) && (player.transform.localScale.y == yLocalScale - 0.5f))
+            if ((player.transform.position.y > yPosition) && (player.transform.localScale.y == yLocalScale - 0.5f))
             {
                 Assert.Pass();
             }
             else
             {
                 Assert.Fail();
-            }*//*
+            }
 
             //yield return new WaitForSeconds(1);
 
@@ -289,5 +276,5 @@ namespace Tests
         {
             SceneManager.UnloadSceneAsync(0);
         }
-    }*/
+    }
 }

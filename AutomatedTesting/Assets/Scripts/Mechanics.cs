@@ -7,10 +7,11 @@ public class Mechanics : MonoBehaviour
 {
     public float speed = 5;
     bool grounded = true;
-    float maxLanes = 5;
+    float maxLanes = 3;
     float rightLaneBoundary;
     float leftLaneBoundary;
     float distanceToMove = 1;
+    float jumpHeight = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -93,20 +94,9 @@ public class Mechanics : MonoBehaviour
 
     public void SwipeUp()
     {
-        if(this.transform.position.y > 0)
-        {
-            grounded = false;
-        }
-        else if(this.transform.position.y == 0)
-        {
-            grounded = true;
-        }
-        if (grounded == true)
-        {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 4, this.transform.position.z);
-            grounded = false;
-            StartCoroutine("JumpDelay");
-        }
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + jumpHeight, this.transform.position.z);
+        grounded = false;
+        StartCoroutine("JumpDelay");
     }
 
     public void SwipeDown()
@@ -139,7 +129,7 @@ public class Mechanics : MonoBehaviour
     public IEnumerator JumpDelay()
     {
         yield return new WaitForSeconds(1);
-        this.transform.position = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+        this.transform.position = new Vector3(this.transform.position.x, 1, this.transform.position.z);
         grounded = true;
     }
 
@@ -159,5 +149,10 @@ public class Mechanics : MonoBehaviour
     {
         yield return new WaitForSeconds(8);
         speed = 5;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
     }
 }

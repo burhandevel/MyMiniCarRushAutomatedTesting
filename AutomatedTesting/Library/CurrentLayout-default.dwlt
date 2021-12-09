@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 124
-    width: 1920
-    height: 1117
+    x: 8
+    y: 51
+    width: 1904
+    height: 1103
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
@@ -67,8 +67,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 1117
+    width: 1904
+    height: 1103
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
@@ -88,7 +88,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1904
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1097
-    width: 1920
+    y: 1083
+    width: 1904
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -133,12 +133,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 1067
-  m_MinSize: {x: 503, y: 492}
+    width: 1904
+    height: 1053
+  m_MinSize: {x: 504, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 130
+  controlID: 128
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,12 +158,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1117
-    height: 1067
-  m_MinSize: {x: 402, y: 492}
+    width: 1024
+    height: 1053
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 106
+  controlID: 86
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,12 +183,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1117
-    height: 737
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+    width: 1024
+    height: 380
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 107
+  controlID: 61
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,8 +206,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 385
-    height: 737
+    width: 276
+    height: 380
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
@@ -230,12 +230,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 385
+    x: 276
     y: 0
-    width: 732
-    height: 737
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 748
+    height: 380
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 737
-    width: 1117
-    height: 330
+    y: 380
+    width: 1024
+    height: 673
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 19}
@@ -280,25 +280,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1117
+    x: 1024
     y: 0
-    width: 803
-    height: 1067
+    width: 880
+    height: 1053
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 13}
-  m_Selected: 2
-  m_LastSelected: 3
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,22 +319,22 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 993
-    y: 73
-    width: 926
-    height: 1046
+    x: 1032
+    y: 81
+    width: 879
+    height: 1032
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 190
+    ID: 224
     splitterInitialOffset: 0
     currentActiveSplitter: -1
-    realSizes: dc020000f4000000
+    realSizes: d2020000f0000000
     relativeSizes:
     - 0.75
     - 0.25
     minSizes: 2000000020000000
     maxSizes: 0000000000000000
-    lastTotalSize: 976
+    lastTotalSize: 962
     splitSize: 6
     xOffset: 0
   m_TestTypeToolbarIndex: 0
@@ -345,9 +345,9 @@ MonoBehaviour:
       uniqueId: '[AutomatedTesting][suite]'
       name: AutomatedTesting
       fullName: AutomatedTesting
-      resultStatus: 2
-      duration: 158.02667
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 10.904657
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -361,9 +361,9 @@ MonoBehaviour:
       uniqueId: '[PlayMode.dll][suite]'
       name: PlayMode.dll
       fullName: D:/MCR_AutomatedTesting/MiniCarRushAutomatedTesting/AutomatedTesting/Library/ScriptAssemblies/PlayMode.dll
-      resultStatus: 2
-      duration: 157.92944
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 10.833399
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -377,9 +377,9 @@ MonoBehaviour:
       uniqueId: PlayMode.dll/[PlayMode][Tests][suite]
       name: Tests
       fullName: Tests
-      resultStatus: 2
-      duration: 157.8712
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 10.801825
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
       name: Cars
       fullName: Tests.Cars
       resultStatus: 1
-      duration: 6.554979
+      duration: 6.5603414
       messages: 
       output: 
       stacktrace: 
@@ -410,7 +410,7 @@ MonoBehaviour:
       name: BuyButtonTest
       fullName: Tests.Cars.BuyButtonTest
       resultStatus: 1
-      duration: 5.382399
+      duration: 5.3999596
       messages: 
       output: 
       stacktrace: 
@@ -427,7 +427,7 @@ MonoBehaviour:
       name: SelectButtonTest
       fullName: Tests.Cars.SelectButtonTest
       resultStatus: 1
-      duration: 0.0563899
+      duration: 0.0470342
       messages: 
       output: 
       stacktrace: 
@@ -444,7 +444,7 @@ MonoBehaviour:
       name: Z_BackButtonTest
       fullName: Tests.Cars.Z_BackButtonTest
       resultStatus: 1
-      duration: 1.062431
+      duration: 1.0505345
       messages: 
       output: 
       stacktrace: 
@@ -726,6 +726,39 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1019
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.HUD][suite]
+    - id: 1028
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.InventoryTests][suite]
+      name: InventoryTests
+      fullName: Tests.InventoryTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1029
+      uniqueId: PlayMode.dll/Tests/InventoryTests/[PlayMode][Tests.InventoryTests.BuyCoinsTest]
+      name: BuyCoinsTest
+      fullName: Tests.InventoryTests.BuyCoinsTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.InventoryTests][suite]
     - id: 1023
       uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.LeaderBoards][suite]
       name: LeaderBoards
@@ -1005,6 +1038,155 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1027
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MainMenu][suite]
+    - id: 1001
+      uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+      name: MechanicsTests
+      fullName: Tests.MechanicsTests
+      resultStatus: 2
+      duration: 1.3078316
+      messages: 'TearDown : System.ArgumentException : Scene to unload is invalid'
+      output: 'Left Lane = -1
+
+        Right Lane = 1
+
+'
+      stacktrace: "--TearDown\r\n  at (wrapper managed-to-native) UnityEngine.SceneManagement.SceneManagerAPIInternal.UnloadSceneNameIndexInternal(string,int,bool,UnityEngine.SceneManagement.UnloadSceneOptions,bool&)\r\n 
+        at UnityEngine.SceneManagement.SceneManager.UnloadSceneNameIndexInternal
+        (System.String sceneName, System.Int32 sceneBuildIndex, System.Boolean immediately,
+        UnityEngine.SceneManagement.UnloadSceneOptions options, System.Boolean& outSuccess)
+        [0x00016] in <9674024ab0e74d27bbe9eaa30dab34d1>:0 \r\n  at UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync
+        (System.Int32 sceneBuildIndex) [0x00001] in <9674024ab0e74d27bbe9eaa30dab34d1>:0
+        \r\n  at Tests.MechanicsTests.OneTimeTearDown () [0x00001] in D:\\MCR_AutomatedTesting\\MiniCarRushAutomatedTesting\\AutomatedTesting\\Assets\\Tests\\PlayMode\\GamePlay\\MechanicsTests.cs:277
+        \r\n  at (wrapper managed-to-native) System.Reflection.MonoMethod.InternalInvoke(System.Reflection.MonoMethod,object,object[],System.Exception&)\r\n 
+        at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x00032] in <9577ac7a62ef43179789031239ba8798>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1068
+      parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
+    - id: 1007
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.BoostTest]
+      name: BoostTest
+      fullName: Tests.MechanicsTests.BoostTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1006
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.DashTest]
+      name: DashTest
+      fullName: Tests.MechanicsTests.DashTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1005
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.DuckTest]
+      name: DuckTest
+      fullName: Tests.MechanicsTests.DuckTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1004
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.JumpTest]
+      name: JumpTest
+      fullName: Tests.MechanicsTests.JumpTest
+      resultStatus: 1
+      duration: 1.2289639
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1008
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.ShockWaveTest]
+      name: ShockWaveTest
+      fullName: Tests.MechanicsTests.ShockWaveTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1002
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.SwipeLeftTest]
+      name: SwipeLeftTest
+      fullName: Tests.MechanicsTests.SwipeLeftTest
+      resultStatus: 1
+      duration: 1.2037346
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
+    - id: 1003
+      uniqueId: PlayMode.dll/Tests/MechanicsTests/[PlayMode][Tests.MechanicsTests.SwipeRightTest]
+      name: SwipeRightTest
+      fullName: Tests.MechanicsTests.SwipeRightTest
+      resultStatus: 1
+      duration: 1.203142
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.MechanicsTests][suite]
     - id: 1039
       uniqueId: PlayMode.dll/Tests/[PlayMode][Tests.Pause][suite]
       name: Pause
@@ -1280,7 +1462,7 @@ MonoBehaviour:
       name: Shop
       fullName: Tests.Shop
       resultStatus: 1
-      duration: 5.446993
+      duration: 10.771765
       messages: 
       output: 
       stacktrace: 
@@ -1291,12 +1473,12 @@ MonoBehaviour:
       categories: []
       parentId: 1063
       parentUniqueId: PlayMode.dll/[PlayMode][Tests][suite]
-    - id: 1057
-      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.BuyBoostsTest]
-      name: BuyBoostsTest
-      fullName: Tests.Shop.BuyBoostsTest
+    - id: 1062
+      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.A_BuyCoinsTest]
+      name: A_BuyCoinsTest
+      fullName: Tests.Shop.A_BuyCoinsTest
       resultStatus: 1
-      duration: 0.1256778
+      duration: 2.391224
       messages: 
       output: 
       stacktrace: 
@@ -1306,14 +1488,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1054
+      parentId: 1061
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.Shop][suite]
-    - id: 1055
-      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.BuyCoinsTest]
-      name: BuyCoinsTest
-      fullName: Tests.Shop.BuyCoinsTest
+    - id: 1057
+      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.BuyBoostsTest]
+      name: BuyBoostsTest
+      fullName: Tests.Shop.BuyBoostsTest
       resultStatus: 1
-      duration: 0.0505044
+      duration: 1.0509596
       messages: 
       output: 
       stacktrace: 
@@ -1330,7 +1512,7 @@ MonoBehaviour:
       name: BuyDiamondsTest
       fullName: Tests.Shop.BuyDiamondsTest
       resultStatus: 1
-      duration: 0.0404696
+      duration: 1.0440863
       messages: 
       output: 
       stacktrace: 
@@ -1347,7 +1529,7 @@ MonoBehaviour:
       name: BuyHeadStartTest
       fullName: Tests.Shop.BuyHeadStartTest
       resultStatus: 1
-      duration: 0.0420782
+      duration: 1.0521677
       messages: 
       output: 
       stacktrace: 
@@ -1359,12 +1541,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1054
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.Shop][suite]
-    - id: 1059
-      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.BuyMysteryBoxesTest]
-      name: BuyMysteryBoxesTest
-      fullName: Tests.Shop.BuyMysteryBoxesTest
+    - id: 1066
+      uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.BuyMysteryBoxTest]
+      name: BuyMysteryBoxTest
+      fullName: Tests.Shop.BuyMysteryBoxTest
       resultStatus: 1
-      duration: 4.061901
+      duration: 1.0446723
       messages: 
       output: 
       stacktrace: 
@@ -1374,14 +1556,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1054
+      parentId: 1061
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.Shop][suite]
     - id: 1060
       uniqueId: PlayMode.dll/Tests/Shop/[PlayMode][Tests.Shop.OpenMysteryBoxTest]
       name: OpenMysteryBoxTest
       fullName: Tests.Shop.OpenMysteryBoxTest
       resultStatus: 1
-      duration: 0.042707
+      duration: 3.0595126
       messages: 
       output: 
       stacktrace: 
@@ -1398,7 +1580,7 @@ MonoBehaviour:
       name: Z_BackButtonTest
       fullName: Tests.Shop.Z_BackButtonTest
       resultStatus: 1
-      duration: 1.046719
+      duration: 1.0526658
       messages: 
       output: 
       stacktrace: 
@@ -1410,18 +1592,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1054
       parentUniqueId: PlayMode.dll/Tests/[PlayMode][Tests.Shop][suite]
-    m_ResultText: 'Tests (157.871s)
-
-      ---
-
-      One or more child tests had
-      errors'
+    m_ResultText: A_BuyCoinsTest (2.391s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bc805a6d
-      m_LastClickedID: 1834647740
-      m_ExpandedIDs: 7513ec807e40d7b19f5c62b65efc25c6e2a319e249c05808deb9a222bc805a6d70481970ebf0a875ffffff7f
+      m_SelectedIDs: 93a46ce0
+      m_LastClickedID: -529750893
+      m_ExpandedIDs: 9f5c62b6deb9a2229ea92362bc805a6debf0a875ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1520,10 +1697,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 511
-    width: 992
-    height: 608
+    x: 8
+    y: 461
+    width: 1023
+    height: 652
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1569,23 +1746,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 992
-      height: 587
-    m_Scale: {x: 0.30572918, y: 0.30572918}
-    m_Translation: {x: 496, y: 293.49997}
+      width: 1023
+      height: 631
+    m_Scale: {x: 0.32864583, y: 0.32864583}
+    m_Translation: {x: 511.5, y: 315.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1622.3508
-      y: -959.9999
-      width: 3244.7017
-      height: 1919.9999
+      x: -1556.3867
+      y: -960
+      width: 3112.7734
+      height: 1920
     m_MinimalGUI: 1
-  m_defaultScale: 0.30572918
-  m_LastWindowPixelSize: {x: 992, y: 608}
+  m_defaultScale: 0.32864583
+  m_LastWindowPixelSize: {x: 1023, y: 652}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
@@ -1612,17 +1789,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 154
-    width: 384
-    height: 716
+    x: 8
+    y: 81
+    width: 275
+    height: 359
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: def7fffffaf7ffffe4f9ffff08faffff8cfaffff68fbffff86390000f83d0000e4410000
+      m_ExpandedIDs: b8b1ffffd4b1ffff92b2ffff26bfffff42bfffffe0bfffff36d7ffff52d7fffff0d7ffff4ad8ffff66d8fffff4d8ffff52d9ffff6ed9fffffcd9ffff56daffff72daffff10dbffffc0dbffffdcdbffff6adcffffc8dcffffe4dcffffa8ddffff06deffff22deffffcadeffff28dfffff44dfffffe0dfffff60e4ffff7ce4ffff1ae5ffff9aebffffb6ebffff54ecffffbaecffffd6ecffff74edffffceedffffeaedffff88eeffffe8eeffff04efffffa2efffffa8f0ffffc4f0ffff62f1ffffc2f1ffffdef1ffff9af2ffff06f3ffff22f3ffffc0f3ffff22f4ffff3ef4ffffdcf4ffff38f5ffff54f5fffff2f5ffff36f8ffff52f8fffff0f8ffff54f9ffff70f9ffff12faffff68fbffff1e4200007a490000504a0000e84b00006c97000042980000aeb40000bccf0000200d010086580100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1667,10 +1844,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 385
-    y: 154
-    width: 730
-    height: 716
+    x: 284
+    y: 81
+    width: 746
+    height: 359
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: d8a160974f54cf64facbb188bfc47dae
@@ -1682,9 +1859,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 608.33075, y: 923.7608, z: -7495.25}
+    m_Target: {x: 415.69962, y: 849.68115, z: -1534.0513}
     speed: 2
-    m_Value: {x: 608.33075, y: 923.7608, z: -7495.25}
+    m_Value: {x: 415.69962, y: 849.68115, z: -1534.0513}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1734,9 +1911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1215.3806
+    m_Target: 1033.4927
     speed: 2
-    m_Value: 1215.3806
+    m_Value: 1033.4927
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1879,10 +2056,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 891
-    width: 1116
-    height: 309
+    x: 8
+    y: 461
+    width: 1023
+    height: 652
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1897,20 +2074,20 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tests/PlayMode
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tests/PlayMode
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\MCR_AutomatedTesting\MiniCarRushAutomatedTesting\AutomatedTesting
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f43b0000
-    m_LastClickedID: 15348
-    m_ExpandedIDs: 00000000e23b0000e43b0000f43b000000ca9a3b
+    m_SelectedIDs: 143c0000
+    m_LastClickedID: 15380
+    m_ExpandedIDs: 00000000023c0000043c0000063c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1938,7 +2115,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e23b0000e43b0000
+    m_ExpandedIDs: 00000000023c0000043c0000063c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2015,10 +2192,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 993
-    y: 73
-    width: 926
-    height: 1046
+    x: 1032
+    y: 81
+    width: 879
+    height: 1032
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -2053,22 +2230,22 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1039
-    y: 73
-    width: 880
-    height: 1046
+    x: 1116
+    y: 81
+    width: 795
+    height: 1030
   m_ViewDataDictionary: {fileID: 0}
   m_VertSplit:
-    ID: 153
+    ID: 948
     splitterInitialOffset: 548
     currentActiveSplitter: -1
-    realSizes: 10020000ef010000
+    realSizes: 09020000e8010000
     relativeSizes:
     - 0.516129
     - 0.48387098
     minSizes: 6400000064000000
     maxSizes: 0000000000000000
-    lastTotalSize: 1023
+    lastTotalSize: 1009
     splitSize: 6
     xOffset: 0
   m_Recording: 1
@@ -2145,16 +2322,16 @@ MonoBehaviour:
           m_ThreadIndex: 0
           m_DetailedViewType: 1
           m_DetailedViewSpliterState:
-            ID: 1005
+            ID: 994
             splitterInitialOffset: 655
             currentActiveSplitter: -1
-            realSizes: 380200000a020000
+            realSizes: c201000059010000
             relativeSizes:
             - 0.5210484
             - 0.47895157
             minSizes: c201000032000000
             maxSizes: 0000000000000000
-            lastTotalSize: 1090
+            lastTotalSize: 795
             splitSize: 6
             xOffset: 0
           m_DetailedObjectsView:
@@ -2603,10 +2780,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1117
-    y: 154
-    width: 802
-    height: 1046
+    x: 1032
+    y: 81
+    width: 879
+    height: 1032
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &23
 MonoBehaviour:

@@ -65,8 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BuyCar.cs" />
+    <Compile Include="Assets\Scripts\BuyCharacter.cs" />
     <Compile Include="Assets\Scripts\CustomID.cs" />
     <Compile Include="Assets\Scripts\GamePlayMainScript.cs" />
+    <Compile Include="Assets\Scripts\InventoryHandler.cs" />
     <Compile Include="Assets\Scripts\LoadGamePlay.cs" />
     <Compile Include="Assets\Scripts\LoadMainMenu.cs" />
     <Compile Include="Assets\Scripts\Mechanics.cs" />

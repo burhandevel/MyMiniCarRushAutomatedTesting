@@ -26,6 +26,12 @@ namespace Tests
         string carsPanelID = "carsPanel";
         string mainMenuPanelID = "mainMenu";
 
+        // Cars PlayerPrefs
+        string ModularPlayerPref = "MODULAR";
+        string DynamoPlayerPref = "DYNAMO";
+        string AlloyPlayerPref = "ALLOY";
+        string TazionPlayerPref = "TAZION";
+
         [OneTimeSetUp]
         public void OneSetUp()
         {
@@ -76,6 +82,7 @@ namespace Tests
             GameObject attemptedPurchasePopup3 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
             Assert.IsNull(attemptedPurchasePopup3);
             // Assert in future
+            Assert.AreEqual(1, PlayerPrefs.GetInt(ModularPlayerPref));
         }
 
         [UnityTest]
