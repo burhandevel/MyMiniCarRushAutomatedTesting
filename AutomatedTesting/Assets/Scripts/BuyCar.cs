@@ -13,8 +13,15 @@ public class BuyCar : MonoBehaviour
     string AlloyPlayerPref = "ALLOY";
     string TazionPlayerPref = "TAZION";
 
+    int ModularCost = 100;
+    int DynamoCost = 500;
+    int AlloyCost = 1000;
+    int TazionCost = 2000;
+
+
     string[] cars = { "Modular", "Dynamo", "Alloy", "Tazion" };
     public Text currentCar;
+    public Text Coins;
 
     PopupHandler popupHandler;
     // Start is called before the first frame update
@@ -40,6 +47,10 @@ public class BuyCar : MonoBehaviour
         {
             PlayerPrefs.SetInt(TazionPlayerPref, 0);
         }
+
+        //currentCar.text = cars[Random.Range(0, 4)];
+        currentCar.text = cars[0];
+        Coins.text = "Coins : " + PlayerPrefs.GetInt("COINS");
     }
 
     // Update is called once per frame
@@ -53,75 +64,32 @@ public class BuyCar : MonoBehaviour
         popupHandler.OpenThePopUp("AttemptedPurchase");
     }
 
-    public void PurchaseModularCar()
-    {
-        if (PlayerPrefs.GetInt(ModularPlayerPref) == 0)
-        {
-            PlayerPrefs.SetInt(ModularPlayerPref, 1);
-        }
-    }
-
-    public void PurchaseDynamoCar()
-    {
-        if (PlayerPrefs.GetInt(DynamoPlayerPref) == 0)
-        {
-            PlayerPrefs.SetInt(DynamoPlayerPref, 1);
-        }
-    }
-
-    public void PurchaseAlloyCar()
-    {
-        if(PlayerPrefs.GetInt(AlloyPlayerPref) == 0)
-        {
-            PlayerPrefs.SetInt(AlloyPlayerPref, 1);
-        } 
-    }
-
-    public void PurchaseTazionCar()
-    {
-        if (PlayerPrefs.GetInt(TazionPlayerPref) == 0)
-        {
-            PlayerPrefs.SetInt(TazionPlayerPref, 1);
-        }
-    }
 
     public void PurchaseCar()
     {
-        //string currentCarString = currentCar.ToString();
-        //currentCarString = cars[Random.Range(0, 5)];
-        if(currentCar.text == "Modular")
+        string carName = currentCar.text.ToUpper();
+        PlayerPrefs.SetInt(carName, 1);
+        Debug.Log(carName + " Purchased");
+        if (carName.Equals(ModularPlayerPref))
         {
-            PurchaseModularCar();
+            PlayerPrefs.SetInt("COINS", PlayerPrefs.GetInt("COINS") - ModularCost);
+            Coins.text = "Coins : " + PlayerPrefs.GetInt("COINS");
         }
-        else if(currentCar.text == "Dynamo")
+        else if (carName.Equals(DynamoPlayerPref))
         {
-            PurchaseModularCar();
+            PlayerPrefs.SetInt("COINS", PlayerPrefs.GetInt("COINS") - DynamoCost);
+            Coins.text = "Coins : " + PlayerPrefs.GetInt("COINS");
         }
-        else if(currentCar.text == "Alloy")
+        else if (carName.Equals(AlloyPlayerPref))
         {
-            PurchaseAlloyCar();
+            PlayerPrefs.SetInt("COINS", PlayerPrefs.GetInt("COINS") - AlloyCost);
+            Coins.text = "Coins : " + PlayerPrefs.GetInt("COINS");
         }
-        else if (currentCar.text == "Tazion")
+        else if (carName.Equals(TazionPlayerPref))
         {
-            PurchaseTazionCar();
+            PlayerPrefs.SetInt("COINS", PlayerPrefs.GetInt("COINS") - TazionCost);
+            Coins.text = "Coins : " + PlayerPrefs.GetInt("COINS");
         }
-
-        /*if (currentCarString.Equals("Modular"))
-        {
-            PurchaseModularCar();
-        }
-        else if (currentCarString.Equals("Dynamo"))
-        {
-            PurchaseDynamoCar();
-        }
-        else if (currentCarString.Equals("Alloy"))
-        {
-            PurchaseAlloyCar();
-        }
-        else if(currentCarString.Equals("Tazion"))
-        {
-            PurchaseTazionCar();
-        }*/
     }
 
     public void Right()

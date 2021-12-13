@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\BuyCar.cs" />
     <Compile Include="Assets\Scripts\BuyCharacter.cs" />
     <Compile Include="Assets\Scripts\CustomID.cs" />
+    <Compile Include="Assets\Scripts\CustomTag.cs" />
     <Compile Include="Assets\Scripts\GamePlayMainScript.cs" />
     <Compile Include="Assets\Scripts\InventoryHandler.cs" />
     <Compile Include="Assets\Scripts\LoadGamePlay.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Mechanics.cs" />
     <Compile Include="Assets\Scripts\PanelHandler.cs" />
     <Compile Include="Assets\Scripts\PopupHandler.cs" />
+    <Compile Include="Assets\Scripts\Triggered.cs" />
     <None Include="Assets\Scripts\GameAssembly.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

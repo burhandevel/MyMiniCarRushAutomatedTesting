@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CustomID : MonoBehaviour
 {
     public string testingID;
     public static CustomID testingInstance;
 
-
     private void Start()
     {
         testingInstance = this;
     }
+
     public GameObject GetGameObject(string id)
     {
         GameObject target = null;

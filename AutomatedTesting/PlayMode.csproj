@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tests\PlayMode\GamePlay\MechanicsTests.cs" />
+    <Compile Include="Assets\Tests\PlayMode\GamePlay\PickupTests.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Cars.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\Characters.cs" />
     <Compile Include="Assets\Tests\PlayMode\UI\GameOver.cs" />

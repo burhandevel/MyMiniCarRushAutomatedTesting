@@ -32,6 +32,15 @@ namespace Tests
         string AlloyPlayerPref = "ALLOY";
         string TazionPlayerPref = "TAZION";
 
+        string coinsPlayerPrefKey = "COINS";
+
+        int ModularCost = 100;
+        int DynamoCost = 500;
+        int AlloyCost = 1000;
+        int TazionCost = 2000;
+
+        int totalCars = 4;
+
         [OneTimeSetUp]
         public void OneSetUp()
         {
@@ -50,39 +59,71 @@ namespace Tests
             GameObject carPanel = CustomID.testingInstance.GetGameObject(carsPanelID);
             Assert.IsNotNull(carPanel);
 
-            // Click the cars buy button
-            GameObject carBuyButton = CustomID.testingInstance.GetGameObject(carsBuyButtonID);
-            Assert.IsNotNull(carBuyButton);
-            automation.Click(carBuyButton);
-            yield return seconds;
-            GameObject attemptedPurchasePopup = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
-            Assert.IsNotNull(attemptedPurchasePopup);
+            GameObject carRightButton = CustomID.testingInstance.GetGameObject("CarRightButton");
+            Assert.IsNotNull(carRightButton);
 
-            // Click the NO button
-            GameObject attemptedNoButton = CustomID.testingInstance.GetGameObject(attemptedNoButtonID);
-            Assert.IsNotNull(attemptedNoButton);
-            automation.Click(attemptedNoButton);
-            yield return seconds;
-            GameObject attemptedPurchasePopup1 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
-            Assert.IsNull(attemptedPurchasePopup1);
+            for(int i = 0; i < totalCars; i++)
+            {
+                // Click the cars buy button
+                GameObject carBuyButton = CustomID.testingInstance.GetGameObject(carsBuyButtonID);
+                Assert.IsNotNull(carBuyButton);
+                automation.Click(carBuyButton);
+                yield return seconds;
+                GameObject attemptedPurchasePopup = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
+                Assert.IsNotNull(attemptedPurchasePopup);
 
-            // Click the buy button again
-            GameObject carBuyButton1 = CustomID.testingInstance.GetGameObject(carsBuyButtonID);
-            Assert.IsNotNull(carBuyButton1);
-            automation.Click(carBuyButton1);
-            yield return seconds;
-            GameObject attemptedPurchasePopup2 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
-            Assert.IsNotNull(attemptedPurchasePopup2);
+                // Click the NO button
+                GameObject attemptedNoButton = CustomID.testingInstance.GetGameObject(attemptedNoButtonID);
+                Assert.IsNotNull(attemptedNoButton);
+                automation.Click(attemptedNoButton);
+                yield return seconds;
+                GameObject attemptedPurchasePopup1 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
+                Assert.IsNull(attemptedPurchasePopup1);
 
-            // Click YES button
-            GameObject attemptedYesButton = CustomID.testingInstance.GetGameObject(attemptedYesButtonID);
-            Assert.IsNotNull(attemptedYesButton);
-            automation.Click(attemptedYesButton);
-            yield return seconds;
-            GameObject attemptedPurchasePopup3 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
-            Assert.IsNull(attemptedPurchasePopup3);
-            // Assert in future
-            Assert.AreEqual(1, PlayerPrefs.GetInt(ModularPlayerPref));
+                // Click the buy button again
+                GameObject carBuyButton1 = CustomID.testingInstance.GetGameObject(carsBuyButtonID);
+                Assert.IsNotNull(carBuyButton1);
+                automation.Click(carBuyButton1);
+                yield return seconds;
+                GameObject attemptedPurchasePopup2 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
+                Assert.IsNotNull(attemptedPurchasePopup2);
+
+                // Get the value of coins before purchasing
+                int coinsAmount = PlayerPrefs.GetInt(coinsPlayerPrefKey);
+
+                // Click YES button
+                GameObject attemptedYesButton = CustomID.testingInstance.GetGameObject(attemptedYesButtonID);
+                Assert.IsNotNull(attemptedYesButton);
+                automation.Click(attemptedYesButton);
+                yield return seconds;
+                GameObject attemptedPurchasePopup3 = CustomID.testingInstance.GetGameObject(attemptedPurchaseID);
+                Assert.IsNull(attemptedPurchasePopup3);
+
+                GameObject currentCar = CustomID.testingInstance.GetGameObject("currentCar");
+                string carName = currentCar.GetComponentInChildren<Text>().text.ToUpper();
+                //Debug.Log(carName);
+                // Assert in future
+                Assert.AreEqual(1, PlayerPrefs.GetInt(carName));
+                if (carName.Equals(ModularPlayerPref))
+                {
+                    Assert.AreEqual(coinsAmount - ModularCost, PlayerPrefs.GetInt(coinsPlayerPrefKey));
+                }
+                else if (carName.Equals(DynamoPlayerPref))
+                {
+                    Assert.AreEqual(coinsAmount - DynamoCost, PlayerPrefs.GetInt(coinsPlayerPrefKey));
+                }
+                else if (carName.Equals(AlloyPlayerPref))
+                {
+                    Assert.AreEqual(coinsAmount - AlloyCost, PlayerPrefs.GetInt(coinsPlayerPrefKey));
+                }
+                else if (carName.Equals(TazionPlayerPref))
+                {
+                    Assert.AreEqual(coinsAmount - TazionCost, PlayerPrefs.GetInt(coinsPlayerPrefKey));
+                }
+
+                automation.Click(carRightButton);
+                yield return seconds;
+            }
         }
 
         [UnityTest]
